@@ -3,15 +3,28 @@ const student = {
     lastName: "Lidahl",
     strengths: ["music", "art", "dance", "theater"],
     presence: true,
-    exams: function avgMark() {
+    exams: function () {
         var midterm = 95;
-        var final = 88;
+        var final = 70;
         var avg = (midterm + final) / 2;
         return avg;
     }
 }
 
-document.write("Student's name is " + student.firstName + student.lastName
-    + ", Good in " + student.strengths + ", Present in all exams " + student.presence
-    + ".  Student's average mark in exams is " + student.exams.avgMark);
+var student_innfo = document.getElementById("student_info");
+student_innfo.innerHTML = "Student's name is: " + student.firstName + student.lastName
+    + ", Good in: " + student.strengths + ", Present in all exams: " + student.presence
+    + ". To see the average mark of this student, press that button";
+
+var btn = document.getElementById("show_mark").addEventListener("click", displayAvg);
+
+function displayAvg() {
+    var average = document.getElementById("avg");
+    // average.innerHTML = student.exams();
+    alert("The average mark achieved by this student is " + student.exams());
+}
+
+
+
+
 
