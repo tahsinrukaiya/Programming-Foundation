@@ -1,6 +1,4 @@
  /*****TAG SELECTOR*****/
-
-
  body {
    background-color: #F7A76C;
    text-align: center;
@@ -23,4 +21,11 @@
    font-family: Arial, Helvetica, sans-serif;
    font-size: 15px;
    border-radius: 6px;
+ }
+
+
+ @media only screen and (min-width:768px) {
+   #show_mark {
+     width: 400px;
+   }
  }
